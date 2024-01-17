@@ -16,10 +16,18 @@ redis-server - to start redis server
 go run main.go - to run url shortener code
 
 To use it, you need to use this endpoint:
+
 POST {{host}}/create-short-url
 ```
+Request:
 {
     "long_url": string,
     "user_id" : string
+}
+
+Response: 
+{
+    "message": string,
+    "short_url": string
 }
 ```
